@@ -27,11 +27,17 @@ body{
     border-radius: 20px;
     flex-direction: column;
     gap: 10px;
-    width: 80%;
+    min-width: 500px;
     z-index: 12;
     left: 36%;
     top: 20%;
     transition: 0.3s linear;
+}
+
+@media (max-width : 500px){
+    .row{
+        min-width: 350px;
+    }
 }
 .row form{
     /* width: 20%; */
@@ -59,15 +65,27 @@ body{
     font-weight: 14px;
     /* background-color: rgb(255, 130, 21); */
 }
-.row button{
+.row button, .row a{
+    text-decoration: none;
     padding: 16px;
     font-size: 16px;
     background-color: rgb(255, 130, 21);
     border-radius: 10px;
     border: none;
     outline: none;
+    color: #000;
+}
+.row a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .row button:hover{
+    background-color: rgb(166, 72, 0);
+    color: #fff;
+    transition: 0.2s;
+}
+.row a:hover{
     background-color: rgb(166, 72, 0);
     color: #fff;
     transition: 0.2s;
